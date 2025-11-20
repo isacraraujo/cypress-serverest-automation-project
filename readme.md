@@ -74,3 +74,21 @@ Inicie o Docket Desktop em sua máquina local, acesse o repositório via Termina
 ```sh
 docker build -t cypress-serverest-automation-project .
 ```
+
+## Integração & Entrega Contínua com Jenkins (CI/CD)
+Neste repositório há um arquivo Jenkinsfile com um pipeline para execução do projeto em integração e entrega contínua.
+
+### 1. Configurar o Jenkins
+Instale o Jenkins no seu ambiente, configurando os plugins, etc.
+
+### 2. Configurar o Repositório
+Crie um novo 'job' a partir do repositório do projeto no GitHub selecionando a opção SCM
+```https://github.com/isacraraujo/cypress-serverest-automation-project.git```
+
+Obs.: Selecione a branch 'main' ao invés da 'master' (padrão do Jenkins).
+
+### 3. Configurar Variáveis de Ambiente
+- Acesse: Manage Jenkins > Configure System > Global Properties > Environment Variables > Add e defina: 'Name' e 'Value' semelhante ao arquivo .env do projeto criado inicialmente.
+
+### 4. Execute a Pipeline
+Selecione o 'job' criado no passo 2 e clique em Executar.
