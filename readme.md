@@ -15,7 +15,7 @@ Execute os seguintes comandos no terminal para configurar o ambiente de testes:
 
 ### 1. Baixar Repositório
 ```sh
-git clone https://github.com/isacraraujo/cypress-automation-project.git
+git clone https://github.com/isacraraujo/cypress-serverest-automation-project.git
 ```
 Este comando vai fazer o clone do projeto para sua máquina local.
 
@@ -67,4 +67,10 @@ npx cypress open
 ### Para abrir o Relatório (Mochawesome) Após Execução
 ```sh
 npm run report
+```
+
+## Execução do Projeto em uma Imagem utilizando o Docker
+Inicie o Docket Desktop em sua máquina local, acesse o repositório via Terminal e execute o seguinte comando para gerar uma imagem do projeto de acordo com o arquivo Dockerfile:
+```sh
+docker build -t cypress-serverest-automation-project .
 ```
