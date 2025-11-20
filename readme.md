@@ -21,7 +21,7 @@ Este comando vai fazer o clone do projeto para sua máquina local.
 
 ### 2. Acessar o Repositório:
 ```sh
-cd /cypress-automation-project
+cd /cypress-serverest-automation-project
 ```
 Este comando vai acessar a pasta do projeto clonado.
 
