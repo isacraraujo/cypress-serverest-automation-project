@@ -15,3 +15,6 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands'
+
+// importa a biblioteca de cypress (cy.api) para visualização na execução
+import 'cypress-plugin-api';
