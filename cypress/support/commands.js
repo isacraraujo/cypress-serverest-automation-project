@@ -7,19 +7,13 @@
 // commands please read more here:
 // https://on.cypress.io/custom-commands
 // ***********************************************
-//
-//
-// -- This is a parent command --
-// Cypress.Commands.add('login', (email, password) => { ... })
-//
-//
-// -- This is a child command --
-// Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
-//
-//
-// -- This is a dual command --
-// Cypress.Commands.add('dismiss', { prevSubject: 'optional'}, (subject, options) => { ... })
-//
-//
-// -- This will overwrite an existing command --
-// Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+// Comando personalizado para fazer login diretamente no sistema
+Cypress.Commands.add('login_frontend', (url, user, password) => {
+  cy.visit(`${url}/login`)
+  cy.contains('h1','Login').should('be.visible')
+  cy.get('[data-testid="email"]').type(user)
+  cy.get('[data-testid="senha"]').type(password)
+  cy.get('[data-testid="entrar"]').click()
+  cy.contains('h1','Serverest Store').should('be.visible')
+});
