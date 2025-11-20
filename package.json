@@ -1,0 +1,14 @@
+{
+  "devDependencies": {
+    "@faker-js/faker": "^10.1.0",
+    "cypress": "^15.7.0",
+    "cypress-mochawesome-reporter": "^4.0.2",
+    "cypress-plugin-api": "^2.11.2"
+  },
+  "scripts": {
+    "cy:installer": "npm install -D cypress@latest && npm install -D cypress-mochawesome-reporter@latest && npm install -D @faker-js/faker@latest && npm i -D cypress-plugin-api@latest",
+    "cy:run_chrome": "npx cypress run --browser chrome",
+    "report": "start cypress/reports/report.html",
+    "cypress": "npm run cy:run_chrome && npm run report"
+  }
+}
